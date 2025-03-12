@@ -4,6 +4,8 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
+import com.educandoweb.workshopmongo.dto.AuthorDTO;
+
 public class Post implements Serializable{
 	private static final long serialVersionUID = 1L;
 
@@ -11,13 +13,13 @@ public class Post implements Serializable{
 	private Date date;
 	private String title;
 	private String body;
-	private User author;
+	private AuthorDTO author;
 	
 	public Post() {
 
 	}
 
-	public Post(String id, Date date, String title, String body, User user) {
+	public Post(String id, Date date, String title, String body, AuthorDTO user) {
 		super();
 		this.id = id;
 		this.date = date;
@@ -58,11 +60,11 @@ public class Post implements Serializable{
 		this.body = body;
 	}
 
-	public User getUser() {
+	public AuthorDTO getUser() {
 		return author;
 	}
 
-	public void setUser(User user) {
+	public void setUser(AuthorDTO user) {
 		this.author = user;
 	}
 
