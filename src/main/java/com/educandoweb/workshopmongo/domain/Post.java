@@ -4,11 +4,15 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.educandoweb.workshopmongo.dto.AuthorDTO;
 
+@Document
 public class Post implements Serializable{
 	private static final long serialVersionUID = 1L;
 
+	
 	private String id;
 	private Date date;
 	private String title;
